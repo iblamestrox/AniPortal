@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniPortal | The Zenith Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="menu-btn" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <h1 class="logo">AniPortal<span>.</span></h1>
+        </div>
+        <div class="header-right">
+            <input type="text" id="search-bar" placeholder="Search archive..." onkeyup="searchArchive()">
+        </div>
+    </header>
+
+    <nav id="side-menu" class="side-menu">
+        <div class="nav-brand">Menu</div>
+        <ul>
+            <li onclick="switchCategory('anime')" id="tab-anime" class="active-tab">Anime</li>
+            <li onclick="switchCategory('manga')" id="tab-manga">Comics / Manga</li>
+        </ul>
+    </nav>
+
+    <main class="main-wrapper">
+        <section class="content-section">
+            <div class="grid-header">
+                <h2 id="category-title">Anime Archive</h2>
+                <div class="a-z-bar" id="az-filter">
+                    </div>
+            </div>
+            <div class="grid-container" id="main-grid">
+                </div>
+        </section>
+
+        <aside class="ranking-sidebar">
+            <div class="sidebar-card">
+                <h3>Top Tier List</h3>
+                <ol id="rank-list" class="rank-items">
+                    </ol>
+            </div>
+        </aside>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

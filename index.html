@@ -14,7 +14,8 @@
             <div class="menu-btn" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
-            <h1 class="logo">AniPortal<span>.</span></h1>
+            <img src="logo.png" alt="AniPortal" class="header-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <h1 class="logo" style="display:none">AniPortal<span>.</span></h1>
         </div>
         <div class="header-right">
             <div class="search-wrapper">
@@ -39,9 +40,9 @@
         <section class="content-section">
             <div class="grid-header">
                 <h2 id="category-title">Anime Archive</h2>
+                <div class="a-z-bar" id="az-filter"></div>
             </div>
             <div class="grid-container" id="main-grid"></div>
-            <div id="loading-spinner" class="loading-text" style="display: none;">Loading more archives...</div>
         </section>
 
         <aside class="ranking-sidebar">
@@ -55,7 +56,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-left">
-                <h1 class="footer-logo">ANIPORTAL<span>.</span></h1>
+                <img src="logo.png" alt="AniPortal" class="footer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <h1 class="footer-logo" style="display:none">ANIPORTAL<span>.</span></h1>
             </div>
             <div class="footer-right">
                 <span class="share-text">SHARE</span>
@@ -74,10 +76,6 @@
             <div id="modal-body"></div>
         </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
 
     <script src="script.js"></script>
 </body>

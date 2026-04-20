@@ -14,18 +14,25 @@
             <div class="menu-btn" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
-            <h1 class="logo">AniPortal<span>.</span></h1>
+            <img src="logo.png" alt="AniPortal" class="header-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <h1 class="logo" style="display:none">AniPortal<span>.</span></h1>
         </div>
         <div class="header-right">
-            <input type="text" id="search-bar" placeholder="Search archive..." onkeyup="searchArchive()">
+            <div class="search-wrapper">
+                <input type="text" id="search-bar" placeholder="Search archive..." onkeyup="searchArchive()">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
         </div>
     </header>
 
     <nav id="side-menu" class="side-menu">
-        <div class="nav-brand">Menu</div>
+        <div class="menu-header">
+            <div class="nav-brand">Menu</div>
+            <div class="close-menu" onclick="toggleMenu()">&times;</div>
+        </div>
         <ul>
             <li onclick="switchCategory('anime')" id="tab-anime" class="active-tab">Anime</li>
-            <li onclick="switchCategory('manga')" id="tab-manga">Comics / Manga</li>
+            <li onclick="switchCategory('manga')" id="tab-manga">Mangas</li>
         </ul>
     </nav>
 
@@ -33,21 +40,35 @@
         <section class="content-section">
             <div class="grid-header">
                 <h2 id="category-title">Anime Archive</h2>
-                <div class="a-z-bar" id="az-filter">
-                    </div>
+                <div class="a-z-bar" id="az-filter"></div>
             </div>
-            <div class="grid-container" id="main-grid">
-                </div>
+            <div class="grid-container" id="main-grid"></div>
         </section>
 
         <aside class="ranking-sidebar">
             <div class="sidebar-card">
                 <h3>Top Tier List</h3>
-                <ol id="rank-list" class="rank-items">
-                    </ol>
+                <ol id="rank-list" class="rank-items"></ol>
             </div>
         </aside>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="logo.png" alt="AniPortal" class="footer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <h1 class="footer-logo" style="display:none">ANIPORTAL<span>.</span></h1>
+            </div>
+            <div class="footer-right">
+                <span class="share-text">SHARE</span>
+                <div class="social-links">
+                    <div class="social-circle">IG</div>
+                    <div class="social-circle">DC</div>
+                    <div class="social-circle">FB</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <div id="modal" class="modal" onclick="closeModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
